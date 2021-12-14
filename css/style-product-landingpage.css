@@ -1,7 +1,7 @@
 /** global Element styling **/
 
 :root { 
-  --primary-clr: rgb(73, 61, 94);
+  --primary-clr: rgb(100, 86, 124);
   --secondary-clr: rgb(187, 173, 173);
   --bg1-clr: wheat;
   --bg2-clr: rgb(190, 235, 197);
@@ -16,13 +16,28 @@
 }
 
 body {  
-  min-height: 100vh;
-  max-width: 100vw;  
-  display: block;
+  min-height: 100vh;  
+  width: auto;   
   color: var(--texts-clr, black);
   background-color: var(--bg1-clr, white);
   font-family: 'Lato', sans-serif;
   position: relative;
+}
+
+
+h1 {
+  margin: 10px 20px;
+  text-align: center;
+  color: var(--titles-clr, brown);
+}
+ 
+h2, h3 {
+  margin: 20% ;
+  text-align: center;
+  color: var(--titles-clr, black);
+}
+.wrapper {
+  width: 80%;  
 }
 
 /** End of Global setting **/
@@ -31,8 +46,8 @@ body {
 
 #header { 
   width: 100%; 
-  height: 20%;
-  margin-bottom: 20px;
+  height: 25%;
+  margin: auto;
   background-color: var(--primary-clr, lightblue);
   position: fixed;
   top: 0;  
@@ -42,13 +57,13 @@ body {
 
 .header-div {
   display: flex;
-  flex-direction: row;   
-  justify-content: space-between; 
-  align-items: flex-start; 
+  flex-direction: row;
+  align-items: flex-start;
   position: relative;
 }
 
 #header-title {  
+  margin: 10px 30px;
   font-family: 'Montserrat', 'Times New Roman', serif;
   font-size: 4em;
   font-style: oblique ;
@@ -111,6 +126,7 @@ body {
 /** Main content **/
 
 #main-content {
+  margin: 15%;
   width: 100%;
   height: 100%;
   display: flex;
@@ -120,18 +136,8 @@ body {
   position: relative; 
 }
 
-h1 {
-  text-align: center;
-  color: var(--titles-clr, brown);
-}
- 
-h2, h3 {
-  text-align: center;
-  color: var(--titles-clr, black);
-}
-
 .container {   
-  width: 70%;
+  width: auto;
   position: relative;  
   display: flex;
   flex-direction: column; 
@@ -142,12 +148,11 @@ h2, h3 {
 }
 
 .container-items {
-  width: 75%; 
+  width: 75%;  
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
 } 
 
 
@@ -156,17 +161,8 @@ h2, h3 {
   max-width: 350px;
   width: 100%;
   height: 100%;
-  display: block;
-}
-
-.product-demo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;  
-  border: none;
-}
+  
+  }
 
 .product-items {
   display: flex;
@@ -206,7 +202,7 @@ h2, h3 {
 }
 
 .btn {
-  display: inline;
+  margin-bottom: 40px;
   padding: 0 20px;  
   font-size: 1em;
   font-weight: 900;
@@ -214,20 +210,11 @@ h2, h3 {
   border: 3px black solid;
   border-radius: 2px;
   background: transparent;
+  display: inline;
   cursor: pointer;
-  margin-bottom: 40px;
 }
 
-.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 125px;
-  width: 20vw;
-  color: black;
-}
-
-.company-moto {  
+.moto {  
   padding: 10px;
   font-size: 1em;
   font-style: italic ;
@@ -248,11 +235,19 @@ h2, h3 {
 
 
 #form {
+  margin: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+label {
+  margin-top: 10px;
+}
+input {
+  padding: 5px;
+  display: inline;
 }
 
 /** End of Main content **/
@@ -262,13 +257,14 @@ h2, h3 {
 #footer {  
   width: 100%; 
   height: 10%;
-  margin-top: 5px;
-  background-color: var(--primary-clr, lightblue);  
+  margin:auto;
+  background-color: var(--primary-clr, lightblue); 
   position: relative;  
+ 
 }
 
 #footer ul {
-  padding: 10px;
+  padding: 20px 0;
   list-style: none;
   display: flex;
   justify-content: flex-end;
